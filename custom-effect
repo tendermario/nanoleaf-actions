@@ -1,0 +1,47 @@
+from nanoleaf import Aurora
+
+ip = '192.168.88.254'
+auth_token = 'ZGW3EHNvScT8vpDLDs3T2T8VS6lFeQYC'
+
+my_aurora = Aurora(ip, auth_token)
+my_aurora.on = True
+
+effect_data = {
+    "command": "add",
+    "animName": "My Random Animation",
+    "animType": "wheel",
+    "colorType": "HSB",
+    "animData": None,
+    "palette": [
+        {
+            "hue": 0,
+            "saturation": 100,
+            "brightness": 40
+        },
+        {
+            "hue": 120,
+            "saturation": 100,
+            "brightness": 40
+        },
+        {
+            "hue": 240,
+            "saturation": 100,
+            "brightness": 40
+        }
+    ],
+    "brightnessRange": {
+        "minValue": 0,
+        "maxValue": 100
+    },
+    "transTime": {
+        "minValue": 20,
+        "maxValue": 20
+    },
+    "delayTime": {
+        "minValue": 10,
+        "maxValue": 10
+    },
+    "loop": True
+}
+
+my_aurora.effect_set_raw(effect_data)
