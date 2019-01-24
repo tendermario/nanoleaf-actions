@@ -1,0 +1,13 @@
+from nanoleaf import Aurora
+
+ip = '192.168.88.254'
+auth_token = 'ZGW3EHNvScT8vpDLDs3T2T8VS6lFeQYC'
+
+my_aurora = Aurora(ip, auth_token)
+my_aurora.on = True
+
+# Connecteeeed
+# my_aurora.effect = "Disco Dance Floor"
+while True:
+  my_aurora.effect_random()
+
